@@ -18,7 +18,12 @@ const App = () => {
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Button
         title="Calculate Inflation"
-        onPress={() => Analytics.trackEvent('calculate_inflation', {"Internet": "Wifi", "GPS":"Off"})}
+        onPress={() =>
+          Analytics.trackEvent('calculate_inflation', {
+            Internet: 'Wifi',
+            GPS: 'Off',
+          })
+        }
       />
     </View>
   );
